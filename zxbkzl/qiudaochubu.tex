@@ -1,0 +1,223 @@
+\section{求导初步}
+\subsection{导数的四则运算}
+\begin{description}
+\item[{\kaishu \zihao{4}\hspace{2em}\color{cyan}\ding{229}定理}]\hspace{1.5em}设函数$u(x)\text{和}v(x)$在点$x$可导，则它们的和、差、积、商（分母不为零）也均在$x$处可导，且\begin{enumerate}[1)]
+\item $(\mu+\nu)'=\mu'\pm \nu'$;
+\item $(\mu\nu)'=\mu'\nu+\mu\nu'$;\\$(c\mu)'=c\mu'$~~（$c$~为常数）\\
+推广：$(u_1u_2\cdots u_n)'=u_1'u_2 \cdots u_n+u_1u_2'\cdots u_n+\cdots+u_1\cdots u_{n-1}u_n'$
+\item $\left(\dfrac{u}{v}\right)'=\dfrac{u'v-uv'}{v^2}~~(v\neq 0)$
+\end{enumerate}
+\end{description}
+\begin{example}
+设$y=x^3+\sqrt[3]{x}+\cos x+\ln x+\sin \dfrac{\pi}{7}$~,求$y'$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+y' &=\left(x^3\right)'+\left(x^{\tfrac{1}{3}}\right)'+\left(\cos x \right)'+\left(\ln x\right)'+\left(\sin \dfrac{\pi}{7}\right)'\\
+&=3x^2+\dfrac{1}{3} x^{-\tfrac{2}{3}}-\sin x+\dfrac{1}{x}
+\end{aligned}$
+\end{solution}
+\begin{example}
+设$y=x^3\ln x\cos x$~,求$y'$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+y'&=\left(x^3\right)'\ln x\cos x+x^3\left(\ln x\right)'\cos x+x^3\ln x\left(\cos x\right)'\\
+&=3x^2\ln x\cos x+x^2\cos x-x^3\ln x\sin x
+\end{aligned}$
+\end{solution}
+\begin{example}
+设$y=\left(x^2+3a^x\right)\left(\sin x-1\right)$~,求$y'$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+y'&=\left(x^2+3a^x\right)'\left(\sin x-1\right)+\left(x^2+3a^x\right)\left(\sin x-1\right)'\\
+&=\left(2x+3a^x\ln a\right)\left(\sin x-1\right)+\left(x^2+3a^x\right)\cos x
+\end{aligned}$
+\end{solution}
+\begin{example}
+设$f(x)=\dfrac{x\sin x}{1+\cos x}$~,求~$y'$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+f'(x)&=\dfrac{\left(x\sin x\right)'\left(1+\cos x\right)-x\sin x\left(1+\cos x\right)'}{\left(1+\cos x\right)^2}\\
+&=\dfrac{\left(\sin x+x\cos x\right)\left(1+\cos x\right)+x\sin ^2 x}{1+\cos x}^2\\
+&=\dfrac{\sin x+x}{1+\cos x}
+\end{aligned}$
+\end{solution}
+\begin{example}
+$f(x)=x^2+\sin x$~,求$f'(x)\text{及}f'(\dfrac{\pi}{2})$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+&f'(x)=\left(x^2\right)'+\left(\sin x\right)'=2x+\cos x\\
+&f'\left(\dfrac{\pi}{2}\right)=2\bm\cdot \dfrac{\pi}{2}+\cos \dfrac{\pi}{2}=\pi
+\end{aligned}$
+\end{solution}
+\begin{example}
+$y=\tan x$~,求$y'$~。
+\end{example}
+\begin{solution}
+$\begin{aligned}
+y'&=\left(\tan x\right)'=\left(\dfrac{\sin x}{\cos x}\right)'\\
+&=\dfrac{\left(\sin x\right)'\cos x-\sin x\left(\cos x\right)'}{\cos ^2 x}\\
+&=\dfrac{\cos x\cos x-\sin x\left(-\sin x\right)}{\cos ^2 x}\\
+&=\dfrac{1}{\cos^2 x}=\sec ^2 x
+\end{aligned}$
+\end{solution}
+即$\left(\tan x\right)'=\sec ^2 x$~，同样方法可求出$y=\cot x~,y=\sec x~,y=\csc x$~
+的导数。
+\begin{example}
+$y=\dfrac{1}{x}$~，求$y'=?$~。
+\end{example}
+\begin{solution}
+$y'=\left(\dfrac{1}{x}\right)'=-\dfrac{1}{x^2}$
+\end{solution}
+\begin{example}
+求下列函数的导数：
+$(1) y=\mathrm{e}^x\cos x-\dfrac{\ln x}{2x}\\
+(2) y=\dfrac{1+\tan x}{\sin x}+\left(1+x^2\right)\arctan x$
+\end{example}
+\begin{solution}
+$\begin{aligned}
+(1)y'&=\left(\mathrm{e}^x\cos x\right)'-\left(\dfrac{\ln x}{2x}\right)'\\
+&=\mathrm{e}^x\cos x-\mathrm{e}^x\sin x-\dfrac{\dfrac{1}{x}\bm \cdot 2x-\ln x \bm\cdot 2}{\left(2x\right)^2}\\
+&=\mathrm{e}^2\left(\cos x-\sin x\right)-\dfrac{1-\ln x}{2x^2}\\
+(2)y'&=\dfrac{\left(1+\tan x\right)'\sin x-\left(1+\tan x\right)\left(\sin x\right)'}{\left(\sin x\right)^2}+\left(1+x^2\right)'\arctan x+\left(1+x^2\right)\left(\arctan x\right)'\\
+&=\dfrac{\sec^2 x\sin x-\left(1+\tan x\right)\cos x}{\left(\sin x\right)^2}+2x\arctan x+1
+\end{aligned}$
+\end{solution}
+\subsection{反函数的导数}
+前面我们讲反函数的连续性时讲过，区间~$I$~上的单调连续函数的反函数仍然是单调连续函数，现在我们假定它的导数存在来研究其反函数导数的情况。
+\begin{description}
+\item[{\kaishu \zihao{4}\hspace{2em}\color{cyan}\ding{229}定理}]\hspace{1.5em}如果函数$x=\varphi(x)$在某区间$I_y$内单调、可导且$\varphi '(x)\neq 0$，那么它的反函数$y=f(x)$在对应区间$I_x$内也可导，且$f'(x)=\dfrac{1}{\varphi '(y)}$即反函数的导数等于直接函数导数的倒数。
+\end{description}
+\begin{example}
+求函数$y=\arcsin x$的导数。
+\end{example}
+\begin{solution}
+$y=\arcsin x\text{是}x=\sin y\text{的反函数，}x=\sin y\text{在}\left(-\dfrac{\pi}{2},\dfrac{\pi}{2}\right)\text{内单调可导，且}\left(\sin y\right)'=\cos y\\
+\text{所以}y=\arcsin x\text{在}\left(-1,1\right)\text{内可导，且}\\
+y'=\left(\arcsin x\right)'=\dfrac{1}{\left(\sin y\right)'}=\dfrac{1}{\cos y}\\
+\text{由}\cos y=\sqrt{1-\sin ^2 y}=\sqrt{1-x^2},\text{所以}\left(\arcsin x\right)'=\dfrac{1}{\sqrt{1-x^2}}\\
+\text{同理可得}\left(\arccos x\right)'=-\dfrac{1}{\sqrt{1-x^2}}~,\left(\arctan x\right)'=\dfrac{1}{1+x^2}~,\left(\mathrm{arccot ~x}\right)'=-\dfrac{1}{1+x^2}$
+\end{solution}
+\subsection{复合函数的求导法则}
+复合函数的求导方法是一非常重要的方法，因为一个复杂的函数不仅可由一些简单函数经四则运算得到，也经常由函数的复合运算而构成，因此我们必须研究复合函数的求导方法。
+\begin{description}
+\item[{\kaishu \zihao{4}\hspace{2em}\color{cyan}\ding{229}定理}]\hspace{1.5em}如果$u=\varphi(x)$点$x$可导，而$y=f(u)$在点$u=\varphi(x)$可导，则复合函数$y=f\left[\varphi(x)\right]$在点$x$可导，且\[\dfrac{dy}{dx}=\dfrac{dy}{du}\bm\cdot \dfrac{du}{dx}\text{或}y'_x=y'_u\bm\cdot u'_x=f'\left(u\right)\bm\cdot \varphi'\left(x\right).\]
+\end{description}
+\begin{proof}
+由于$y=f(u)$在$u$可导，因此$f'(u)=\lim\limits_{\Delta u\rightarrow 0}\dfrac{\Delta y}{\Delta u}$存在，因此\[\dfrac{\Delta y}{\Delta u}=f'(u)+\alpha\]其中$\alpha$是$\Delta u\rightarrow 0$时的无穷小，当$\Delta u\neq 0$时，用$\Delta u$乘上式两端得\[\Delta y=f'(u)\Delta u+\alpha \bm\cdot \Delta u\]当$\Delta u=0$时，规定$\alpha=0$，则上式仍然成立，两端除以$\Delta x\neq 0$得\[\dfrac{\Delta y}{\Delta x}=f'(u)\dfrac{\Delta u}{\Delta x}+\alpha\bm\cdot \dfrac{\Delta u}{\Delta x}\]	取极限得\[\lim\limits_{\Delta x\rightarrow 0}\dfrac{\Delta y}{\Delta x}=\lim\limits_{\Delta x\rightarrow 0}\left[f'(u)\dfrac{\Delta u}{\Delta x}+\alpha \dfrac{\Delta u}{\Delta x}\right]=f'(u)\varphi'(x)\]
+即\[y'=f'(u)\bm\cdot \varphi(x)\].
+\end{proof}
+\begin{example}
+设$y=\sin \left(3x^2\right)$~，求$y'$~。
+\end{example}
+\begin{solution}
+设$u=3x^2$~，则$y=\sin u$~，用复合函数求导公式得
+$y'=\left(\sin u\right)'\bm\cdot \left(3x^2\right)=\cos u\bm\cdot 6x=6x\bm\cdot \cos 3x^2$
+\end{solution}
+\begin{example}
+$y=\ln \cos x$~，求$y'$~。
+\end{example}
+\begin{solution}
+设$u=\cos x$~，则$y=\ln u$~，\\
+$y'=\left(\ln u\right)'\left(\cos x\right)'=\dfrac{1}{u}\left(-\sin x\right)=-\dfrac{\sin x}{\cos x}=-\tan x$
+\end{solution}
+\begin{example}
+$y=\mathrm{e}^{x^3}$~，求$y'$~。
+\end{example}
+\begin{solution}
+$y=\mathrm{e}^u,~u=x^3$~，\\
+$y'=\left(\mathrm{e}^u\right)'\left(x^3\right)'=\mathrm{e}^u\bm\cdot 3x^2=3x^2\mathrm{e}^{x^3}$
+\end{solution}
+利用复合函数求导公式还可得\[\left(\dfrac{1}{\nu (x)}\right)'=\left(\left[\nu (x)\right]^{-1}\right)'=-\left[\nu (x)\right]^{-2}\left(\nu (x)\right)'=-\dfrac{\nu '(x)}{\nu ^2(x)}\]
+复合函数的求导法则可以推广到多个中间变量的情形，如设\[y=f(u),u=\varphi(\nu),\nu=\psi(x)\]~则$y=f\left\{\varphi\left[\psi(x)\right]\right\}$的导数为\[\dfrac{dy}{dx}=\dfrac{dy}{du}\ \dfrac{du}{d\nu}\ \dfrac{d\nu}{dx}\text{或}y'_x=y'_u\bm\cdot u'_\nu\bm\cdot \nu'_x\]
+\begin{example}
+$y=\mathrm{e}^{\sin \tfrac{1}{x}}$~，求$y'$~。
+\end{example}
+\begin{solution}
+$y=\mathrm{e}^u,~u=\sin \nu,~\nu=\dfrac{1}{x}$~，\\
+$y'=y'_u\bm\cdot u'_\nu\bm\cdot \nu'_x=\left(\mathrm{e}^u\right)'_u\left(\sin \nu\right)'_\nu\left(\dfrac{1}{x}\right)'_x=\mathrm{e}^u\bm\cdot \cos \nu\bm\cdot \dfrac{-1}{x^2}\\
+=-\dfrac{1}{x^2}\mathrm{e}^{\sin \tfrac{1}{x}}\cos \dfrac{1}{x}$
+\end{solution}
+求导熟练后，可不写出中间变量，按复合顺序层层求导即可，大家要能做到这一点。\\
+如上例\[
+y'=\left(\mathrm{e}^{\sin \frac{1}{x}}\right)'=\mathrm{e}^{\sin \tfrac{1}{x}}\left(\sin \dfrac{1}{x}\right)'=\mathrm{e}^{\sin \tfrac{1}{x}}\cos \dfrac{1}{x}\left(\dfrac{1}{x}\right)'=\mathrm{e}^{\sin \tfrac{1}{x}}\cos \dfrac{1}{x}\dfrac{-1}{x^2}
+\]
+{\kaishu \color{blue}注意：$\left(\mathrm{e}^{-x}\right)'=-\mathrm{e}^{-x}$
+}
+\begin{example}
+求下列函数的导数
+$(1) y=\mathrm{e}^{\arctan\tfrac{1}{x}}$
+$(2) y=\sqrt{\cot 3x}$
+$(3) y=\ln \left(x+\sqrt{1+x^2}\right)$
+\end{example}
+\begin{solution}
+$\begin{aligned}
+(1) y'&=\mathrm{e}^{\arctan\tfrac{1}{x}}\left(\arctan \dfrac{1}{x}\right)'\\
+&=\mathrm{e}^{\arctan \tfrac{1}{x}}\dfrac{1}{1+\left(\dfrac{1}{x}\right)^2}\bm\cdot \left(\dfrac{1}{x}\right)'=\mathrm{e}^{\arctan \tfrac{1}{x}}\dfrac{1}{1+\left(\dfrac{1}{x}\right)^2}\bm\cdot \dfrac{-1}{x^2}\\
+&=\dfrac{-1}{1+x^2}\mathrm{e}^{\arctan \tfrac{1}{x}}
+\end{aligned}$\\
+$\begin{aligned}
+(2)y'&=\dfrac{1}{2}\left(\cot 3x\right)^{-\tfrac{1}{2}}\left(\cot 3x\right)'\\
+&=\dfrac{1}{2\sqrt{\cot 3x}}\left(-\csc^2 3x\right)\left(3x\right)'\\
+&=-\dfrac{3\csc^2 3x}{2\sqrt{\cot 3x}}
+\end{aligned}$\\
+$\begin{aligned}
+(3)y'&=\dfrac{1}{x+\sqrt{1+x^2}}\left[x+\sqrt{1+x^2}\right]'\\
+&=\dfrac{1}{x+\sqrt{1+x^2}}\left[1+\dfrac{x}{1+x^2}\right]\\
+&=\dfrac{1}{\sqrt{1+x^2}}
+\end{aligned}$
+\end{solution}
+{\kaishu \color{blue}注意：符号$f'\left[\varphi(x)\right]$与$\left\{\left[\varphi(x)\right]\right\}'$的区别。如：$\left\{f\left(\ln x\right)\right\}'=f'\left(\ln x\right)\left(\ln x\right)'=\dfrac{1}{x}f'\left(\ln x\right)$
+}
+\begin{example}
+下列写法哪个正确
+\begin{enumerate}[1.]
+\item 设$y=\ln \left(1+x^2\right)$~，则
+\begin{enumerate}[(1)]
+\item $y'=\left(\ln u\right)'\left(1+x^2\right)'=\dfrac{1}{u}\bm\cdot 2x=\dfrac{2x}{1+x^2}$
+\item $y'=\left[\ln \left(1+x^2\right)\right]'=\dfrac{1}{1+x^2}\left(1+x^2\right)'=\dfrac{2x}{1+x^2}$
+\item $y'=\left[\ln \left(1+x^2\right)\right]'\left(1+x^2\right)'=\dfrac{2x}{1+x^2}$
+\end{enumerate}
+\item 设$y=\ln \left(x+\sqrt{x^2-a^2}\right)$~，则$y'=\dfrac{1}{x+\sqrt{x^2-a^2}}\left(1+\dfrac{1}{2\sqrt{x^2-a^2}}\right)\left(x^2-a^2\right)'$
+\item 设$y=\sqrt{\tan \dfrac{x}{2}}$~，则$y'=\dfrac{1}{2\sqrt{\tan \dfrac{x}{2}}}\left(\dfrac{x}{2}\right)'$
+\end{enumerate}
+\end{example}
+\begin{example}
+设下列函数可导，求它们的导数
+\begin{enumerate}[(1)]
+\item $y=f\left(\mathrm{e}^x+x^e\right)$
+\item $y=f\left[\left(x+a\right)^n\right]$
+\item $y=\left[f\left(x+a\right)\right]^n$
+\end{enumerate}
+\end{example}
+\begin{solution}
+$(1)~~y'=f'\left(\mathrm{e}^x+x^e\right)\left(\mathrm{e}^x+x^e\right)'=f'\left(\mathrm{e}^x+x^e\right)\left(\mathrm{e}^x+\mathrm{e}x^{e-1}\right)$\\
+$(2)~~y'=f'\left[\left(x+a\right)^n\right]\left[\left(x+a\right)\right]'=f'\left[\left(x+a\right)^n\right]\left[n\left(x+a\right)^{n-1}\right]$\\
+$(3)~~y'=n\left[f\left(x+a\right)\right]^{n-1}f'\left(x+a\right)$
+\end{solution}
+\begin{example}
+设$f(x)$~可导，且$f'(1)=2$~，求$\dfrac{df\left(\sqrt{x}\right)}{dx}\bigg|_{x=1}$~。
+\end{example}
+\begin{solution}
+$\dfrac{df\left(\sqrt{x}\right)}{dx}\bigg|_{x=1}=f'\left(\sqrt{x}\right)\dfrac{1}{2\sqrt{x}}\big|_{x=1}=\dfrac{1}{2}f'(1)=1$
+\end{solution}
+\begin{example}
+已知$\dfrac{d}{dx}\left[f\left(\dfrac{1}{x^2}\right)\right]=\dfrac{1}{x}$~，求$f'\left(\dfrac{1}{2}\right)$~。
+\end{example}
+\begin{solution}
+$f'\left(\dfrac{1}{x^2}\right)\dfrac{-2}{x^3}=\dfrac{1}{x}~,\therefore f'\left(\dfrac{1}{x^2}\right)=-\dfrac{1}{2}x^2~,f'\left(x\right)=-\dfrac{1}{2x}~,$\\
+所以$f'\left(\dfrac{1}{2}\right)=-1$
+\end{solution}
+\begin{example}
+设$f(x)$~是可导的偶函数，证明：$f'(x)$是奇函数。
+\end{example}
+\begin{proof}
+因$f(x)$是可导的偶函数，$f(-x)=f(x)$\\
+等号两边对$x$求导，$-f'(-x)=f'(x)$~，即$f'(-x)=-f'(x)$\\
+所以$f'(x)$是奇函数。
+\end{proof}
+此结论也可用导数的定义证明。
