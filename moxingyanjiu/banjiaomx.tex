@@ -1,53 +1,7 @@
-\documentclass[10pt]{ctexart}
-\usepackage{morelull}
-%\usepackage{enumerate}
-\usepackage{bm}
-\usepackage{makecell}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{subfigure}
-\usepackage{framed}%包中有添加文字背景色命令shaded
-\colorlet{shadecolor}{MaterialBlue50}
-\usepackage{tabularx}
-\usepackage{multicol}  
-\usepackage{multirow}
-\usepackage{indentfirst}
-\usepackage{amsmath,amssymb,amsthm,bm,bbding,pifont,dsfont}
-\usepackage{mathtools}
-\newcommand{\abs}[1]{\left| #1 \right|}
-\usepackage{caption}
-\captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={图}}
-%定义选择题选项
-\newcommand{\onech}[4]{
-\renewcommand\arraystretch{1.4}
-\begin{tabularx}{\linewidth}{XXXX}
-\setlength\tabcolsep{0pt}
-(A) #1 & (B) #2 & (C) #3 & (D) #4 \\
-\end{tabularx}
-\unskip \unskip}
-\newcommand{\twoch}[4]{
-\renewcommand\arraystretch{1.4}
-\begin{tabularx}{\linewidth}{XX}
-\setlength\tabcolsep{0pt}
-(A) #1 & (B) #2 \\
-(C) #3 & (D) #4
-\end{tabularx}
-\unskip \unskip}
-
-\title{模型研究系列 \quad 半角模型}
-\author{一粒沙整理\\安徽省霍邱县龙潭中心校}
-\date{\today}
-
-
-
-\begin{document}
-\maketitle
-\tableofcontents
-
-
-\section{什么是半角模型？}
+\section{半角模型}
+\subsection{什么是半角模型？}
 所谓“半角模型”指的是题目中出现了两个角，小角等于大角的一半，故称为“半角模型”，有最普通的半角问题，但是多数“半角模型”问题都是特殊角之间的“半角模型”。常见的有“$30^\circ$与$60^\circ$”、“$45^\circ$与$90^\circ$（又称为“正方形半角模型”）”、“$60^\circ$与$120^\circ$”等类型。
-\section{半角模型“破解”策略}
+\subsection{半角模型“破解”策略}
 记住一句话：“\textcolor{red}{半角模型，必旋转}”
 \begin{vuyi}
 
@@ -57,9 +11,10 @@
 
 （3）旋转后，一般需要再证一对共旋转点的三角形全等（SAS）.
 \end{vuyi}
-\section{“半角模型”的类型}
-\subsection{正方形内含半角$90^\circ +45^\circ$}
-\subsubsection{基本模型}
+\subsection{“半角模型”的类型}
+\subsubsection{正方形内含半角$90^\circ +45^\circ$}
+
+
 如图，在正方形$ABCD$中，点$E,F$分别为边$BC,CD$上点，且$\angle EAF=45^\circ$，连接$EF$，$AH\perp EF$.
 \begin{minipage}{0.3\textwidth}
 	\includegraphics[scale=0.8]{figure/banjiao08}
@@ -265,13 +220,7 @@ $\therefore 2AM^2=BM^2+DM^2$
 
 
 
-
-
-\subsubsection{模型变式}
-
-
-
-\subsection{等腰直角三角形内含半角$90^\circ +45^\circ$}
+\subsubsection{等腰直角三角形内含半角$90^\circ +45^\circ$}
 如图，在$\triangle ABC$中，$AB=AC,\angle BAC=90^\circ$，点$D,E$在$BC$上且$\angle DAE=45^\circ$.
 
 性质：\ding{192}:$\triangle BAE \sim \triangle ADE \sim \triangle CDA$
@@ -281,7 +230,7 @@ $\therefore 2AM^2=BM^2+DM^2$
 
 
 
-\subsection{正三角形内含半角$120^\circ +60^\circ$}
+\subsubsection{正三角形内含半角$120^\circ +60^\circ$}
 \begin{minipage}{0.6\textwidth}
 	如图，已知$\triangle ABC$是正三角形，点$D$是$\triangle ABC$外一点，$DB=DC$且$\angle BDC=120^\circ,\angle EDF=60^\circ$，$DE,DF$分别交$AB,AC$于点$E,F$.
 	此时可以推导出以下结论：
@@ -294,16 +243,15 @@ $\therefore 2AM^2=BM^2+DM^2$
 \end{minipage}
 \includegraphics[scale=0.4]{figure/banjiao11.PNG}
 
-\subsection{一般情况半角模型$\alpha +2\alpha$}
+\subsubsection{一般情况半角模型$\alpha +2\alpha$}
 
 
 
 
-\section{习题演练}
+\subsection{习题演练}
 
 
 
 
 
 
-\end{document}

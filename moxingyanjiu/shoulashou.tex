@@ -1,54 +1,20 @@
-\documentclass[10pt]{ctexart}
-\usepackage{morelull}
-\usepackage{enumerate}
-\usepackage{bm}
-\usepackage{makecell}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{subfigure}
-\usepackage{framed}%包中有添加文字背景色命令shaded
-\colorlet{shadecolor}{MaterialBlue50}
-\usepackage{tabularx}
-\usepackage{multicol}  
-\usepackage{multirow}
-\usepackage{indentfirst}
-\usepackage{amsmath,amssymb,amsthm,bm,bbding,pifont,dsfont}
-\usepackage{mathtools}
-\newcommand{\abs}[1]{\left| #1 \right|}
-\usepackage{caption}
-\captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={图}}
-%定义选择题选项
-\newcommand{\onech}[4]{
-\renewcommand\arraystretch{1.4}
-\begin{tabularx}{\linewidth}{XXXX}
-\setlength\tabcolsep{0pt}
-(A) #1 & (B) #2 & (C) #3 & (D) #4 \\
-\end{tabularx}
-\unskip \unskip}
-\newcommand{\twoch}[4]{
-\renewcommand\arraystretch{1.4}
-\begin{tabularx}{\linewidth}{XX}
-\setlength\tabcolsep{0pt}
-(A) #1 & (B) #2 \\
-(C) #3 & (D) #4
-\end{tabularx}
-\unskip \unskip}
-
-\title{模型研究系列 \quad 手拉手全等模型}
-\author{一粒沙\\安徽省霍邱县龙潭中心校}
-\date{\today}
 
 
+\section{手拉手模型——旋转全等}
+\subsection{手拉手模型的定义及基本结论}
+\begin{custom}[explorecolor]{手拉手全等模型}
+	所谓手拉手模型，是指\textcolor{red}{顶角相等}，且有\textcolor{red}{公共顶点}的两个\textcolor{red}{等腰三角形}组成的图形，从中可以得到一个经典的全等模型：因为顶点相连的四条边，形象的可以看作两双手，所以通常称为“手拉手模型”.常见的有等边三角形共顶点，等腰直角三角形共顶点，正方形共顶点等几种，如下图所示。
+	
+	\begin{minipage}{0.3\textwidth}
+		\includegraphics[scale=0.3]{figure/feibiao01.PNG}
+	\end{minipage}
+	\begin{minipage}{0.6\textwidth}
+		结论\ding{192}：\textcolor{red}{$\angle BDC=\angle A+\angle B+\angle C$}\\
+		结论\ding{193}：\textcolor{red}{$AB+AC>BD+CD$}
+	\end{minipage}
+\end{custom}
 
-\begin{document}
-\maketitle
-\tableofcontents
-
-
-\section{什么是手拉手模型？}
-所谓手拉手模型是指顶角相等，且有公共顶点的两个等腰三角形组成的图形，从中可以得到一个经典的全等模型：因为顶点相连的四条边，形象地可以看作两双手，所以通常称为“手拉手模型”。常见的有等边三角形共顶点，等腰直角三角形共顶点，正方形共顶点等几种，如下图所示。
-
-\section{手拉手模型的类型}
+\subsection{手拉手模型的类型}
 \subsection{一般等腰三角形手拉手}
 \begin{minipage}{0.4\textwidth}
 \includegraphics[scale=0.6]{figure/shoulashou01}
@@ -91,7 +57,6 @@
 \includegraphics[scale=0.7]{figure/shoulashou04}
 \end{minipage}
 
-\section{习题演练}
+\subsection{习题演练}
 
 
-\end{document}
