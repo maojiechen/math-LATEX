@@ -209,6 +209,13 @@ D. #4 \\
 \end{tabularx}
 \unskip \unskip}
 
+\newcommand{\xx}[1]{
+  \ifprintanswers
+    \hfill(\hspace{0.5em}~#1~\hspace{0.5em})
+  \else
+    \hfill{~\hspace{1cm}~}
+  \fi}
+
 \newcommand\tiankong{
   \stepcounter{@dati}
   \fullwidth{
